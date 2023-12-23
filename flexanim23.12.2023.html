@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <style>
+ @keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+@keyframes example1 {
+  from {background-color:blueviolet;}
+  to {background-color:palevioletred;}
+}
+* {
+  box-sizing: border-box;
+}
+
+.flex
+{
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+background-color:red;
+animation-name: example;
+ animation-duration:10s;
+ animation-iteration-count: infinite;
+ flex:1;
+}
+
+.flex2
+{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    background-color:blueviolet;
+    justify-content: center;
+    animation-name: example1;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    flex:1;
+}
+.flex>div
+{
+  background-color: #f1f1f1;
+  flex-grow: 4;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex2>div{
+  background-color: #f1f1f1e5;
+  width: 200px;
+  flex-grow: 4;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .flex{
+    flex-direction: column;
+    grid-template-columns:auto;
+    flex: 100%;
+  }
+}
+@media (max-width: 800px) 
+{
+  .flex2{
+    flex-direction: row;
+    grid-template-rows:auto;
+    flex: 100%;
+  }
+}
+    </style>
+    </head>
+    <body>
+        <h1><center>Flex and animation</center></h1>
+        <div class="flex">
+            <div>Apple</div>
+            <div>Mango</div>
+            <div>Orange</div>
+            <div>Strawberry</div>
+            <div>Pomegranate</div>
+            <div>Papaya</div>
+        </div>
+        <div class="flex2">
+            <div>Grapes</div>
+            <div>Pineapple</div>
+            <div>Guava</div>
+            <div>Water melon</div>
+            <div>Cherry</div>
+            <div>Banana</div>
+        </div>
+    </body>
+</html>
